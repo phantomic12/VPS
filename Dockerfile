@@ -1,4 +1,4 @@
-FROM ubuntu:22.04
+FROM ubuntu:18.04
 
 ENV DEBIAN_FRONTEND=noninteractive
 
@@ -42,6 +42,7 @@ RUN set -ex; \
 	ibus-clutter \
 	ibus-gtk \
 	ibus-gtk3 \
+	ibus-qt4 \
 	python3-pip \
 	python-pip \
 	python3-setuptools \
