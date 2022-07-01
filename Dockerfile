@@ -1,4 +1,4 @@
-FROM ubuntu:18.04
+FROM ubuntu:22.04
 
 ENV DEBIAN_FRONTEND=noninteractive
 
@@ -47,13 +47,14 @@ RUN set -ex; \
 	python-pip \
 	python3-setuptools \
 	python-setuptools \
+	rclone 
 	
     && apt-get autoclean \
     && apt-get autoremove \
     && rm -rf /var/lib/apt/lists/*
 RUN dpkg-reconfigure locales
 
-RUN wget --no-check-certificate -c https://golang.org/dl/go1.16.3.linux-amd64.tar.gz
+RUN wget --no-check-certificate -c https://go.dev/dl/go1.18.3.linux-amd64.tar.gz
 RUN tar -C /usr/local -xvzf go1.*.tar.gz
 RUN export PATH=$PATH:/usr/local/go/bin
 
