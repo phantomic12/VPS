@@ -47,7 +47,7 @@ RUN set -ex; \
 	python-pip \
 	python3-setuptools \
 	python-setuptools \
-	rclone 
+	rclone \
 	
     && apt-get autoclean \
     && apt-get autoremove \
